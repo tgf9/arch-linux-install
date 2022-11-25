@@ -1,0 +1,616 @@
+computer
+    description: Notebook
+    product: XPS 13 9310 (0991)
+    vendor: Dell Inc.
+    serial: [REMOVED]
+    width: 64 bits
+    capabilities: smbios-3.2.0 dmi-3.2.0 smp vsyscall32
+    configuration: boot=normal chassis=notebook family=XPS sku=0991 uuid=[REMOVED]
+  *-core
+       description: Motherboard
+       product: 0MK6WC
+       vendor: Dell Inc.
+       physical id: 0
+       version: A00
+       serial: [REMOVED]
+     *-firmware
+          description: BIOS
+          vendor: Dell Inc.
+          physical id: 1
+          version: 3.11.0
+          date: 09/08/2022
+          size: 1MiB
+          capacity: 32MiB
+          capabilities: pci pnp upgrade shadowing cdboot bootselect edd int5printscreen int9keyboard int14serial int17printer acpi usb smartbattery biosbootspecification netboot uefi
+     *-cpu
+          description: CPU
+          product: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+          vendor: Intel Corp.
+          physical id: 400
+          bus info: cpu@0
+          version: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+          slot: CPU 1
+          size: 528MHz
+          capacity: 4200MHz
+          width: 64 bits
+          clock: 100MHz
+          capabilities: lm fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp x86-64 constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l2 invpcid_single cdp_l2 ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves split_lock_detect dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req avx512vbmi umip pku ospke avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid movdiri movdir64b fsrm avx512_vp2intersect md_clear ibt flush_l1d arch_capabilities cpufreq
+          configuration: cores=4 enabledcores=4 threads=8
+        *-cache:0
+             description: L1 cache
+             physical id: 701
+             slot: L1 Cache
+             size: 128KiB
+             capacity: 128KiB
+             capabilities: synchronous internal write-back instruction
+             configuration: level=1
+        *-cache:1
+             description: L2 cache
+             physical id: 702
+             slot: L2 Cache
+             size: 5MiB
+             capacity: 5MiB
+             capabilities: synchronous internal write-back unified
+             configuration: level=2
+        *-cache:2
+             description: L3 cache
+             physical id: 703
+             slot: L3 Cache
+             size: 8MiB
+             capacity: 8MiB
+             capabilities: synchronous internal write-back unified
+             configuration: level=3
+     *-cache
+          description: L1 cache
+          physical id: 700
+          slot: L1 Cache
+          size: 192KiB
+          capacity: 192KiB
+          capabilities: synchronous internal write-back data
+          configuration: level=1
+     *-memory
+          description: System Memory
+          physical id: 1000
+          slot: System board or motherboard
+          size: 16GiB
+        *-bank:0
+             description: Row of chips LPDDR4 Synchronous 4267 MHz (0.2 ns)
+             physical id: 0
+             slot: Motherboard
+             size: 2GiB
+             width: 16 bits
+             clock: 4267MHz (0.2ns)
+        *-bank:1
+             description: Row of chips LPDDR4 Synchronous 4267 MHz (0.2 ns)
+             physical id: 1
+             slot: Motherboard
+             size: 2GiB
+             width: 16 bits
+             clock: 4267MHz (0.2ns)
+        *-bank:2
+             description: Row of chips LPDDR4 Synchronous 4267 MHz (0.2 ns)
+             physical id: 2
+             slot: Motherboard
+             size: 2GiB
+             width: 16 bits
+             clock: 4267MHz (0.2ns)
+        *-bank:3
+             description: Row of chips LPDDR4 Synchronous 4267 MHz (0.2 ns)
+             physical id: 3
+             slot: Motherboard
+             size: 2GiB
+             width: 16 bits
+             clock: 4267MHz (0.2ns)
+        *-bank:4
+             description: Row of chips LPDDR4 Synchronous 4267 MHz (0.2 ns)
+             physical id: 4
+             slot: Motherboard
+             size: 2GiB
+             width: 16 bits
+             clock: 4267MHz (0.2ns)
+        *-bank:5
+             description: Row of chips LPDDR4 Synchronous 4267 MHz (0.2 ns)
+             physical id: 5
+             slot: Motherboard
+             size: 2GiB
+             width: 16 bits
+             clock: 4267MHz (0.2ns)
+        *-bank:6
+             description: Row of chips LPDDR4 Synchronous 4267 MHz (0.2 ns)
+             physical id: 6
+             slot: Motherboard
+             size: 2GiB
+             width: 16 bits
+             clock: 4267MHz (0.2ns)
+        *-bank:7
+             description: Row of chips LPDDR4 Synchronous 4267 MHz (0.2 ns)
+             physical id: 7
+             slot: Motherboard
+             size: 2GiB
+             width: 16 bits
+             clock: 4267MHz (0.2ns)
+     *-pci
+          description: Host bridge
+          product: 11th Gen Core Processor Host Bridge/DRAM Registers
+          vendor: Intel Corporation
+          physical id: 100
+          bus info: pci@0000:00:00.0
+          version: 01
+          width: 32 bits
+          clock: 33MHz
+        *-display
+             description: VGA compatible controller
+             product: TigerLake-LP GT2 [Iris Xe Graphics]
+             vendor: Intel Corporation
+             physical id: 2
+             bus info: pci@0000:00:02.0
+             logical name: /dev/fb0
+             version: 01
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pciexpress msi pm vga_controller bus_master cap_list rom fb
+             configuration: depth=32 driver=i915 latency=0 mode=1920x1200 visual=truecolor xres=1920 yres=1200
+             resources: iomemory:600-5ff iomemory:400-3ff irq:128 memory:6052000000-6052ffffff memory:4000000000-400fffffff ioport:3000(size=64) memory:c0000-dffff memory:4010000000-4016ffffff memory:4020000000-40ffffffff
+        *-generic:0
+             description: Signal processing controller
+             product: TigerLake-LP Dynamic Tuning Processor Participant
+             vendor: Intel Corporation
+             physical id: 4
+             bus info: pci@0000:00:04.0
+             version: 01
+             width: 64 bits
+             clock: 33MHz
+             capabilities: msi pm cap_list
+             configuration: driver=proc_thermal latency=0
+             resources: iomemory:600-5ff irq:16 memory:6053180000-605319ffff
+        *-pci:0
+             description: PCI bridge
+             product: 11th Gen Core Processor PCIe Controller
+             vendor: Intel Corporation
+             physical id: 6
+             bus info: pci@0000:00:06.0
+             version: 01
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:124 memory:a2500000-a25fffff
+           *-nvme
+                description: NVMe device
+                product: PC SN530 NVMe WDC 256GB
+                vendor: Sandisk Corp
+                physical id: 0
+                bus info: pci@0000:01:00.0
+                logical name: /dev/nvme0
+                version: 21113012
+                serial: [REMOVED]
+                width: 64 bits
+                clock: 33MHz
+                capabilities: nvme pm msi msix pciexpress nvm_express bus_master cap_list
+                configuration: driver=nvme latency=0 nqn=nqn.2018-01.com.wdc:nguid:E8238FA6BF53-0001-001B448B41A02739 state=live
+                resources: irq:16 memory:a2500000-a2503fff memory:a2504000-a25040ff
+              *-namespace:0
+                   description: NVMe disk
+                   physical id: 0
+                   logical name: hwmon2
+              *-namespace:1
+                   description: NVMe disk
+                   physical id: 2
+                   logical name: /dev/ng0n1
+              *-namespace:2
+                   description: NVMe disk
+                   physical id: 1
+                   bus info: nvme@0:1
+                   logical name: /dev/nvme0n1
+                   size: 238GiB (256GB)
+                   capabilities: gpt-1.00 partitioned partitioned:gpt
+                   configuration: guid=f63e07b9-bb13-490b-b4ed-f64363b491ec logicalsectorsize=512 sectorsize=512 wwid=eui.e8238fa6bf530001001b448b41a02739
+                 *-volume:0 UNCLAIMED
+                      description: Windows FAT volume
+                      vendor: mkfs.fat
+                      physical id: 1
+                      bus info: nvme@0:1,1
+                      version: FAT32
+                      serial: [REMOVED]
+                      size: 510MiB
+                      capacity: 511MiB
+                      capabilities: boot fat initialized
+                      configuration: FATs=2 filesystem=fat name=ESP
+                 *-volume:1
+                      description: EFI partition
+                      physical id: 2
+                      bus info: nvme@0:1,2
+                      logical name: /dev/nvme0n1p2
+                      serial: [REMOVED]
+                      size: 237GiB
+                      capacity: 237GiB
+                      width: 999716760 bits
+                      capabilities: encrypted luks initialized
+                      configuration: bits=22474553240 filesystem=luks hash=sha256 name=primary version=2
+        *-pci:1
+             description: PCI bridge
+             product: Tiger Lake-LP Thunderbolt 4 PCI Express Root Port #0
+             vendor: Intel Corporation
+             physical id: 7
+             bus info: pci@0000:00:07.0
+             version: 01
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:125 ioport:4000(size=4096) memory:8c000000-a23fffff ioport:6000000000(size=570425344)
+        *-pci:2
+             description: PCI bridge
+             product: Tiger Lake-LP Thunderbolt 4 PCI Express Root Port #2
+             vendor: Intel Corporation
+             physical id: 7.2
+             bus info: pci@0000:00:07.2
+             version: 01
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:126 ioport:5000(size=4096) memory:74000000-8a3fffff ioport:6030000000(size=570425344)
+        *-generic:1 UNCLAIMED
+             description: System peripheral
+             product: GNA Scoring Accelerator module
+             vendor: Intel Corporation
+             physical id: 8
+             bus info: pci@0000:00:08.0
+             version: 01
+             width: 64 bits
+             clock: 33MHz
+             capabilities: msi pm cap_list
+             configuration: latency=0
+             resources: iomemory:600-5ff memory:60531ed000-60531edfff
+        *-generic:2
+             description: Signal processing controller
+             product: Tigerlake Telemetry Aggregator Driver
+             vendor: Intel Corporation
+             physical id: a
+             bus info: pci@0000:00:0a.0
+             version: 01
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pciexpress pm cap_list
+             configuration: driver=intel_vsec latency=0
+             resources: iomemory:600-5ff irq:0 memory:60531d0000-60531d7fff
+        *-usb:0
+             description: USB controller
+             product: Tiger Lake-LP Thunderbolt 4 USB Controller
+             vendor: Intel Corporation
+             physical id: d
+             bus info: pci@0000:00:0d.0
+             version: 01
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi xhci bus_master cap_list
+             configuration: driver=xhci_hcd latency=0
+             resources: iomemory:600-5ff irq:130 memory:60531c0000-60531cffff
+           *-usbhost:0
+                product: xHCI Host Controller
+                vendor: Linux 6.0.9-arch1-1 xhci-hcd
+                physical id: 0
+                bus info: usb@1
+                logical name: usb1
+                version: 6.00
+                capabilities: usb-2.00
+                configuration: driver=hub slots=1 speed=480Mbit/s
+           *-usbhost:1
+                product: xHCI Host Controller
+                vendor: Linux 6.0.9-arch1-1 xhci-hcd
+                physical id: 1
+                bus info: usb@2
+                logical name: usb2
+                version: 6.00
+                capabilities: usb-3.10
+                configuration: driver=hub slots=4 speed=10000Mbit/s
+        *-usb:1
+             description: USB controller
+             product: Tiger Lake-LP Thunderbolt 4 NHI #0
+             vendor: Intel Corporation
+             physical id: d.2
+             bus info: pci@0000:00:0d.2
+             version: 01
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi msix usb4_host_interface bus_master cap_list
+             configuration: driver=thunderbolt latency=0
+             resources: iomemory:600-5ff iomemory:600-5ff irq:16 memory:6053140000-605317ffff memory:60531ec000-60531ecfff
+        *-usb:2
+             description: USB controller
+             product: Tiger Lake-LP Thunderbolt 4 NHI #1
+             vendor: Intel Corporation
+             physical id: d.3
+             bus info: pci@0000:00:0d.3
+             version: 01
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi msix usb4_host_interface bus_master cap_list
+             configuration: driver=thunderbolt latency=0
+             resources: iomemory:600-5ff iomemory:600-5ff irq:16 memory:6053100000-605313ffff memory:60531eb000-60531ebfff
+        *-communication:0
+             description: Serial controller
+             product: Tiger Lake-LP Integrated Sensor Hub
+             vendor: Intel Corporation
+             physical id: 12
+             bus info: pci@0000:00:12.0
+             version: 20
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm 8250 bus_master cap_list
+             configuration: driver=intel_ish_ipc latency=0
+             resources: iomemory:600-5ff irq:16 memory:60531b0000-60531bffff
+        *-usb:3
+             description: USB controller
+             product: Tiger Lake-LP USB 3.2 Gen 2x1 xHCI Host Controller
+             vendor: Intel Corporation
+             physical id: 14
+             bus info: pci@0000:00:14.0
+             version: 20
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi xhci bus_master cap_list
+             configuration: driver=xhci_hcd latency=0
+             resources: iomemory:600-5ff irq:131 memory:60531a0000-60531affff
+           *-usbhost:0
+                product: xHCI Host Controller
+                vendor: Linux 6.0.9-arch1-1 xhci-hcd
+                physical id: 0
+                bus info: usb@3
+                logical name: usb3
+                version: 6.00
+                capabilities: usb-2.00
+                configuration: driver=hub slots=12 speed=480Mbit/s
+              *-usb:0 UNCLAIMED
+                   description: Generic USB device
+                   product: FingerPrint
+                   vendor: Goodix
+                   physical id: 3
+                   bus info: usb@3:3
+                   version: 1.00
+                   capabilities: usb-2.00
+                   configuration: maxpower=100mA speed=12Mbit/s
+              *-usb:1
+                   description: Video
+                   product: Integrated_Webcam_HD
+                   vendor: Integrated_Webcam_HD
+                   physical id: 6
+                   bus info: usb@3:6
+                   version: 4.21
+                   serial: [REMOVED]
+                   capabilities: usb-2.01
+                   configuration: driver=uvcvideo maxpower=500mA speed=480Mbit/s
+              *-usb:2
+                   description: Bluetooth wireless interface
+                   product: AX201 Bluetooth
+                   vendor: Intel Corp.
+                   physical id: a
+                   bus info: usb@3:a
+                   version: 0.02
+                   capabilities: bluetooth usb-2.01
+                   configuration: driver=btusb maxpower=100mA speed=12Mbit/s
+           *-usbhost:1
+                product: xHCI Host Controller
+                vendor: Linux 6.0.9-arch1-1 xhci-hcd
+                physical id: 1
+                bus info: usb@4
+                logical name: usb4
+                version: 6.00
+                capabilities: usb-3.10
+                configuration: driver=hub slots=4 speed=10000Mbit/s
+        *-memory UNCLAIMED
+             description: RAM memory
+             product: Tiger Lake-LP Shared SRAM
+             vendor: Intel Corporation
+             physical id: 14.2
+             bus info: pci@0000:00:14.2
+             version: 20
+             width: 64 bits
+             clock: 33MHz (30.3ns)
+             capabilities: pm cap_list
+             configuration: latency=0
+             resources: iomemory:600-5ff iomemory:600-5ff memory:60531e0000-60531e3fff memory:60531ea000-60531eafff
+        *-network
+             description: Wireless interface
+             product: Wi-Fi 6 AX201
+             vendor: Intel Corporation
+             physical id: 14.3
+             bus info: pci@0000:00:14.3
+             logical name: wlp0s20f3
+             version: 20
+             serial: [REMOVED]
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi pciexpress msix bus_master cap_list ethernet physical wireless
+             configuration: broadcast=yes driver=iwlwifi driverversion=6.0.9-arch1-1 firmware=72.daa05125.0 QuZ-a0-hr-b0-72.u ip=[REMOVED] latency=0 link=yes multicast=yes wireless=IEEE 802.11
+             resources: iomemory:600-5ff irq:16 memory:60531dc000-60531dffff
+        *-serial:0
+             description: Serial bus controller
+             product: Tiger Lake-LP Serial IO I2C Controller #0
+             vendor: Intel Corporation
+             physical id: 15
+             bus info: pci@0000:00:15.0
+             version: 20
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm bus_master cap_list
+             configuration: driver=intel-lpss latency=0
+             resources: irq:27 memory:4017000000-4017000fff
+        *-serial:1
+             description: Serial bus controller
+             product: Tiger Lake-LP Serial IO I2C Controller #1
+             vendor: Intel Corporation
+             physical id: 15.1
+             bus info: pci@0000:00:15.1
+             version: 20
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm bus_master cap_list
+             configuration: driver=intel-lpss latency=0
+             resources: irq:40 memory:4017001000-4017001fff
+        *-communication:1
+             description: Communication controller
+             product: Tiger Lake-LP Management Engine Interface
+             vendor: Intel Corporation
+             physical id: 16
+             bus info: pci@0000:00:16.0
+             version: 20
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi bus_master cap_list
+             configuration: driver=mei_me latency=0
+             resources: iomemory:600-5ff irq:173 memory:60531e7000-60531e7fff
+        *-serial:2
+             description: Serial bus controller
+             product: Tiger Lake-LP Serial IO I2C Controller #4
+             vendor: Intel Corporation
+             physical id: 19
+             bus info: pci@0000:00:19.0
+             version: 20
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm bus_master cap_list
+             configuration: driver=intel-lpss latency=0
+             resources: iomemory:400-3ff irq:31 memory:4017002000-4017002fff
+        *-serial:3
+             description: Serial bus controller
+             product: Tiger Lake-LP Serial IO I2C Controller #5
+             vendor: Intel Corporation
+             physical id: 19.1
+             bus info: pci@0000:00:19.1
+             version: 20
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm bus_master cap_list
+             configuration: driver=intel-lpss latency=0
+             resources: irq:32 memory:4017003000-4017003fff
+        *-pci:3
+             description: PCI bridge
+             product: Intel Corporation
+             vendor: Intel Corporation
+             physical id: 1d
+             bus info: pci@0000:00:1d.0
+             version: 20
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:127 memory:a2400000-a24fffff
+           *-generic
+                description: MMC Host
+                product: RTS5260 PCI Express Card Reader
+                vendor: Realtek Semiconductor Co., Ltd.
+                physical id: 0
+                bus info: pci@0000:72:00.0
+                logical name: mmc0
+                version: 01
+                width: 32 bits
+                clock: 33MHz
+                capabilities: pm msi pciexpress bus_master cap_list
+                configuration: driver=rtsx_pci latency=0
+                resources: irq:129 memory:a2400000-a2400fff
+        *-isa
+             description: ISA bridge
+             product: Tiger Lake-LP LPC Controller
+             vendor: Intel Corporation
+             physical id: 1f
+             bus info: pci@0000:00:1f.0
+             version: 20
+             width: 32 bits
+             clock: 33MHz
+             capabilities: isa bus_master
+             configuration: latency=0
+        *-multimedia
+             description: Multimedia audio controller
+             product: Tiger Lake-LP Smart Sound Technology Audio Controller
+             vendor: Intel Corporation
+             physical id: 1f.3
+             bus info: pci@0000:00:1f.3
+             version: 20
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi bus_master cap_list
+             configuration: driver=sof-audio-pci-intel-tgl latency=64
+             resources: iomemory:600-5ff iomemory:600-5ff irq:187 memory:60531d8000-60531dbfff memory:6053000000-60530fffff
+        *-serial:4
+             description: SMBus
+             product: Tiger Lake-LP SMBus Controller
+             vendor: Intel Corporation
+             physical id: 1f.4
+             bus info: pci@0000:00:1f.4
+             version: 20
+             width: 64 bits
+             clock: 33MHz
+             configuration: driver=i801_smbus latency=0
+             resources: iomemory:600-5ff irq:16 memory:60531e4000-60531e40ff ioport:efa0(size=32)
+        *-serial:5
+             description: Serial bus controller
+             product: Tiger Lake-LP SPI Controller
+             vendor: Intel Corporation
+             physical id: 1f.5
+             bus info: pci@0000:00:1f.5
+             version: 20
+             width: 32 bits
+             clock: 33MHz
+             configuration: driver=intel-spi latency=0
+             resources: irq:0 memory:70800000-70800fff
+     *-pnp00:00
+          product: Motherboard registers
+          physical id: 0
+          capabilities: pnp
+          configuration: driver=system
+     *-pnp00:01
+          product: AT Real-Time Clock
+          physical id: 2
+          capabilities: pnp
+          configuration: driver=rtc_cmos
+     *-pnp00:02
+          product: PnP device INT3f0d
+          vendor: Interphase Corporation
+          physical id: 3
+          capabilities: pnp
+          configuration: driver=system
+     *-pnp00:03
+          product: IBM Enhanced keyboard controller (101/2-key)
+          physical id: 4
+          capabilities: pnp
+          configuration: driver=i8042 kbd
+     *-pnp00:04
+          product: PnP device DLL0991
+          vendor: Dell Inc
+          physical id: 5
+          capabilities: pnp
+          configuration: driver=i8042 aux
+     *-pnp00:05
+          product: Motherboard registers
+          physical id: 6
+          capabilities: pnp
+          configuration: driver=system
+     *-pnp00:06
+          product: Motherboard registers
+          physical id: 7
+          capabilities: pnp
+          configuration: driver=system
+     *-pnp00:07
+          product: Motherboard registers
+          physical id: 8
+          capabilities: pnp
+          configuration: driver=system
+     *-pnp00:08
+          product: Motherboard registers
+          physical id: 9
+          capabilities: pnp
+          configuration: driver=system
+  *-battery
+       product: DELL FP86V11
+       vendor: BYD
+       physical id: 1
+       version: 01/18/2021
+       serial: [REMOVED]
+       slot: Sys. Battery Bay
+       capacity: 50970mWh
+       configuration: voltage=7.6V
+  *-power UNCLAIMED
+       physical id: 2
+       capacity: 32768mWh
