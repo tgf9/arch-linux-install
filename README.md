@@ -1,3 +1,3 @@
 # Arch Install
 
-Guides on how to install Arch Linux on various laptops.
+Guides on how to install Arch Linux on various hardware.
