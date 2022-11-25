@@ -1,7 +1,8 @@
 # Install
 
 This guide is for installing Linux on a Dell XPS 13 9310. See
-[lshw.txt](lshw.txt) for more hardware info.
+[lshw.txt](lshw.txt) for more detailed hardware info.
+
 
 ## Get installer ISO
 
@@ -17,6 +18,8 @@ df6749df55b02cec98e5a9177c7957acfb96fe14d04553b6e4714100a4824f68  archlinux-2022
 
 Verify it matches the checksum on the
 [Arch Linux Downloads](https://archlinux.org/download) page.
+
+
 
 ## Create installer live USB
 
@@ -54,3 +57,15 @@ Eject the USB drive.
 $ eject /dev/sda
 ```
 
+
+## Change firmware settings
+
+- Disable Secure Boot
+- Storage > NVMe Operation > Select AHCI/NVMe
+
+## Boot installer
+
+- Plug in live USB.
+- Power on the laptop.
+- Press F12 when you see the boot logo.
+- Select the installer live USB.
