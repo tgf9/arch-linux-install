@@ -1,0 +1,39 @@
+{{define "connect-to-wifi"}}
+## Connect to WiFi
+
+Use `iwctl` to connect to WiFi.
+
+```
+$ iwctl station wlan0 scan
+$ iwctl station wlan0 get-networks
+```
+
+If you need to change the keyboard layout to type accents in your SSID, use
+`loadkeys`.
+
+```
+# Switch to us-acentos layout.
+$ loadkeys us-acentos
+
+# Switch to us layout.
+$ loadkeys us
+```
+
+```
+$ iwctl station wlan0 connect mi-red
+```
+
+Verify the internet connection is working.
+
+```
+$ ping -c 3 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=115 time=10.6 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=115 time=16.0 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=115 time=13.1 ms
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 10.610/13.264/16.039/2.218 ms
+```
+{{end}}
