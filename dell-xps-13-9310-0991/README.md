@@ -26,21 +26,23 @@ Verify it matches the checksum on the
 Plug in a USB drive where you want to copy the installer. The installer image
 will take over the entire USB drive.
 
-Use `lsblk` to list the currently detected block devices.
+Use `lsblk` to list the currently detected block devices. In my case, the USB I
+plugged in is at `/dev/sda`.
 
 ```
 $ lsblk
 NAME          MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINTS
-nvme0n1       259:0    0 238.5G  0 disk
+sda             8:0    1  14.3G  0 disk  /run/media/tgf9/myusb
+nvme0n1       259:0    0 447.1G  0 disk
 ├─nvme0n1p1   259:1    0   512M  0 part  /boot
-└─nvme0n1p2   259:2    0   238G  0 part
-  └─cryptroot 254:0    0   238G  0 crypt /
+└─nvme0n1p2   259:2    0 446.6G  0 part
+  └─cryptroot 254:0    0 446.6G  0 crypt /
 ```
 
 Unmount the USB, but don't eject it.
 
 ```
-$ umount
+$ umount /run/media/tgf9/myusb
 ```
 
 Use `cat` to copy the ISO to the USB drive.
@@ -54,7 +56,7 @@ $ sudo -s
 Eject the USB drive.
 
 ```
-$ eject /dev/sda
+$ sudo eject /dev/sda
 ```
 
 
@@ -67,8 +69,8 @@ $ eject /dev/sda
 
 - Plug in live USB.
 - Power on the laptop.
-- Press F12 when you see the boot logo.
-- Select the installer live USB.
+- Press F12 to access the boot menu when you see the boot logo.
+- Select the installer live USB from boot menu.
 
 
 ## Connect to WiFi
