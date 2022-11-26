@@ -60,7 +60,7 @@ $ sudo eject /dev/sda
 ```
 
 
-## Change firmware settings
+## Change firmware settings before boot
 
 - Disable Secure Boot
 - Storage > NVMe Operation > Select AHCI/NVMe
@@ -70,7 +70,8 @@ $ sudo eject /dev/sda
 - Plug in live USB.
 - Power on the laptop.
 - Press F12 to access the boot menu when you see the boot logo.
-- Select the installer live USB from boot menu.
+- Select the installer live USB from boot menu (likely the first entry in the
+  menu)
 
 
 ## Connect to WiFi
@@ -94,7 +95,7 @@ $ loadkeys us
 ```
 
 ```
-$ iwctl station wlan0 connect mi-red
+$ iwctl station wlan0 connect my-network
 ```
 
 Verify the internet connection is working.
@@ -112,6 +113,60 @@ rtt min/avg/max/mdev = 10.610/13.264/16.039/2.218 ms
 ```
 
 
+
 ## Create partition table
-## Create partitions
-## Install file system
+
+Create a GPT partition table on main drive.
+
+- `echo g` create a GPT partition table
+- `echo w` write changes to disk
+
+```
+# (echo g; echo w;) | fdisk /dev/nvme0n1
+```
+
+## Create EFI partition
+
+Create a new partition.
+
+- `echo n` add new partition
+- `echo 1` set parition number
+- `echo` accept default first sector
+- `echo "+513M"` set the last sector
+- `echo w` write changes to disk
+
+```
+# (echo n; echo 1; echo; echo "+512M"; echo w;) | fdisk /dev/nvme0n1
+```
+
+Set partition type to EFI.
+
+- `echo t` change partition type
+- `echo w` write changes to disk
+
+```
+# (echo t; echo "EFI System"; echo w;) | fdisk /dev/nvme0n1
+```
+
+## Create Linux filesystem partition
+
+Create a new partition.
+
+- `echo n` add new partition
+- `echo 2` set parition number
+- `echo` accept default first sector
+- `echo` accept default last sector (end of disk)
+- `echo w` write changes to disk
+
+```
+# (echo n; echo 2; echo; echo; echo w;) | fdisk /dev/nvme0n1
+```
+
+No need to change partition type, default is "Linux filesystem".
+
+## Verify disk
+
+```
+# fdisk -l /dev/nvme0n1
+```
+
