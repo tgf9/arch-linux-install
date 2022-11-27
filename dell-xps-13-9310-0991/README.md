@@ -423,6 +423,8 @@ See [Hardware video acceleration](https://wiki.archlinux.org/title/Hardware_vide
 pacman -S intel-media-driver intel-gpu-tools libva-utils
 ```
 
+Verify there are no errors.
+
 ```
 $ vainfo | grep "Driver"
 vainfo: Driver version: Intel iHD driver for Intel(R) Gen Graphics - 22.4.4
