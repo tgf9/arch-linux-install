@@ -253,6 +253,17 @@ Refresh mirror list used by `pacstrap`, as well as `pacman` in the new system.
 
 
 
+## Configure EFISTUB
+
+The firmware will be in charge of booting Linux.
+
+```
+efibootmgr --create --disk /dev/nvme0n1 --part 1 --label 'Arch Linux' \
+	--loader /vmlinuz-linux \
+	--unicode "cryptdevice=UUID=$(blkid -s UUID -o value /dev/nvme0n1p2):cryptroot root=/dev/mapper/cryptroot rootfstype=ext4 rw initrd=/intel-ucode.img initrd=/initramfs-linux.img i915.enable_guc=2"
+```
+
+
 ## Configure time
 
 ```
