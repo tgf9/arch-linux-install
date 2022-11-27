@@ -257,15 +257,22 @@ Refresh mirror list used by `pacstrap`, as well as `pacman` in the new system.
 
 ## Install fwupd
 
+[fwupd](https://wiki.archlinux.org/title/fwupd) updates firmware found on
+different devices.
+
 ```
 pacman -S fwupd
 ```
 
-## Install sof
+
+## Install sound open firmware drivers
+
+Install [Sound Open Firmware](https://www.sofproject.org/) for audio firmware.
 
 ```
 pacman -S sof-firmware
 ```
+
 
 
 ## Create initial ramdisk
