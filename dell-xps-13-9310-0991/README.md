@@ -254,6 +254,15 @@ Refresh mirror list used by `pacstrap`, as well as `pacman` in the new system.
 
 
 
+## Install Intel microcode
+
+See [Microcode](https://wiki.archlinux.org/title/microcode).
+
+```
+pacman -S intel-ucode
+```
+
+
 ## Install fwupd
 
 [fwupd](https://wiki.archlinux.org/title/fwupd) updates firmware found on
@@ -332,7 +341,6 @@ mkinitcpio -p linux
 Install `efibootmgr`.
 
 ```
-pacman -S intel-ucode
 pacman -S efibootmgr
 ```
 

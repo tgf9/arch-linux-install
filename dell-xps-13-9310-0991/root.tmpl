@@ -21,12 +21,13 @@ This guide is for installing Linux on a Dell XPS 13 9310. See
 
 {{template "bootstrap-system"}}
 
+{{template "install-intel-microcode"}}
 {{template "install-fwupd"}}
 {{template "install-sof"}}
 {{template "setup-intel-graphics" "TigerLake"}}
 
 {{template "create-initial-ramdisk" "TigerLake"}}
-{{template "setup-efistub"}}
+{{template "setup-efistub" "intel"}}
 
 {{template "setup-time"}}
 {{template "setup-locale"}}
