@@ -9,6 +9,12 @@ pacman -S efibootmgr
 
 The firmware will be in charge of booting Linux.
 
+Delete old boot entries before creating additional entries.
+
+```
+efibootmgr -b 0001 -B
+```
+
 Kernel parameters.
 - `cryptdevice` the location of an encrypted partition, plus the decrypted name
 - `root` the root filesystem
@@ -18,6 +24,6 @@ Kernel parameters.
 ```
 efibootmgr --create --disk /dev/nvme0n1 --part 1 --label 'Arch Linux' \
 	--loader /vmlinuz-linux \
-	--unicode "initrd=/{{.}}-ucode.img initrd=/initramfs-linux.img cryptdevice=UUID=$(blkid -s UUID -o value /dev/nvme0n1p2):cryptroot root=/dev/mapper/cryptroot rw"
+	--unicode "initrd=/{{.}}-ucode.img initrd=/initramfs-linux.img cryptdevice=UUID=$(blkid -s UUID -o value /dev/nvme0n1p2):cryptroot root=/dev/mapper/cryptroot rw debug ignore_loglevel"
 ```
 {{end}}
