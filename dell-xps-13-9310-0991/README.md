@@ -265,7 +265,7 @@ pacman -S fwupd
 ```
 
 
-## Install sound open firmware drivers
+## Install sound open firmware
 
 Install [Sound Open Firmware](https://www.sofproject.org/) for audio firmware.
 
@@ -279,11 +279,13 @@ pacman -S sof-firmware
 
 First, edit `/etc/mkinitcpio.conf`. Order is important.
 
+
 Add `i915` for Intel graphics.
 
 ```diff
 MODULES=(i915)
 ```
+
 
 Add the `encrypt` hook so we can unlock the LUKS partition.
 
@@ -297,6 +299,7 @@ Build the image.
 ```
 mkinitcpio -p linux
 ```
+
 
 ## Configure EFISTUB
 
@@ -314,6 +317,7 @@ efibootmgr --create --disk /dev/nvme0n1 --part 1 --label 'Arch Linux' \
 	--loader /vmlinuz-linux \
 	--unicode "cryptdevice=UUID=$(blkid -s UUID -o value /dev/nvme0n1p2):cryptroot root=/dev/mapper/cryptroot rw initrd=/intel-ucode.img initrd=/initramfs-linux.img"
 ```
+
 
 
 ## Configure time
