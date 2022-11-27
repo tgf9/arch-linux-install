@@ -359,7 +359,7 @@ Kernel parameters.
 ```
 efibootmgr --create --disk /dev/nvme0n1 --part 1 --label 'Arch Linux' \
 	--loader /vmlinuz-linux \
-	--unicode "cryptdevice=UUID=$(blkid -s UUID -o value /dev/nvme0n1p2):cryptroot root=/dev/mapper/cryptroot rw initrd=/intel-ucode.img initrd=/initramfs-linux.img"
+	--unicode "initrd=/intel-ucode.img initrd=/initramfs-linux.img cryptdevice=UUID=$(blkid -s UUID -o value /dev/nvme0n1p2):cryptroot root=/dev/mapper/cryptroot rw"
 ```
 
 
