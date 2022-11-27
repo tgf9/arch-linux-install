@@ -1,0 +1,23 @@
+{{define "reboot"}}
+## Reboot
+
+Exit chroot.
+
+```
+exit
+```
+
+Unmount new system.
+
+```
+umount /mnt/boot
+umount /mnt
+```
+
+Restart computer.
+
+```
+reboot
+```
+
+{{end}}

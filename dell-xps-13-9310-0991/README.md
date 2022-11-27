@@ -482,3 +482,27 @@ gsettings get org.gnome.desktop.input-sources sources
 gsettings get org.gnome.desktop.input-sources xkb-options
 ```
 
+
+
+## Reboot
+
+Exit chroot.
+
+```
+exit
+```
+
+Unmount new system.
+
+```
+umount /mnt/boot
+umount /mnt
+```
+
+Restart computer.
+
+```
+reboot
+```
+
+
