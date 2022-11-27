@@ -62,8 +62,11 @@ $ sudo eject /dev/sda
 
 ## Change firmware settings before boot
 
-- Disable Secure Boot
-- Storage > NVMe Operation > Select AHCI/NVMe
+- Boot the laptop
+- Press F2 to access the firmware settings
+
+- Boot Configuration > Enable Secure Boot = OFF
+- Storage > SATA/NVMe Operation = AHCI/NVMe
 
 
 ## Boot installer

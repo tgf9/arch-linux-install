@@ -9,8 +9,11 @@ This guide is for installing Linux on a Dell XPS 13 9310. See
 
 ## Change firmware settings before boot
 
-- Disable Secure Boot
-- Storage > NVMe Operation > Select AHCI/NVMe
+- Boot the laptop
+- Press F2 to access the firmware settings
+
+- Boot Configuration > Enable Secure Boot = OFF
+- Storage > SATA/NVMe Operation = AHCI/NVMe
 
 {{template "boot-installer" "F12"}}
 
