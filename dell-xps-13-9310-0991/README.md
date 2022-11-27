@@ -281,6 +281,7 @@ mkinitcpio -p linux
 Install `efibootmgr`.
 
 ```
+pacman -S intel-ucode
 pacman -S efibootmgr
 ```
 
