@@ -404,8 +404,8 @@ passwd --lock root
 
 
 
-## Configure Intel graphics
 
+## Enable Intel graphics features
 
 Next add this to `/etc/modprobe.d/i915.conf`.
 See [Enable GuC / HuC firmware loading](https://wiki.archlinux.org/title/intel_graphics#Enable_GuC_/_HuC_firmware_loading).
@@ -416,11 +416,17 @@ options i915 enable_fbc=1
 options i915 fastboot=1
 ```
 
+## Configure hardware acceleration
+
 See [Hardware video acceleration](https://wiki.archlinux.org/title/Hardware_video_acceleration#Intel).
 ```
-pacman -S intel-media-driver intel-gpu-tools libva-utils vdpauinfo
+pacman -S intel-media-driver intel-gpu-tools libva-utils
 ```
 
+```
+$ vainfo | grep "Driver"
+vainfo: Driver version: Intel iHD driver for Intel(R) Gen Graphics - 22.4.4
+```
 
 
 
