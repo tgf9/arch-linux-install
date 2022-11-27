@@ -234,26 +234,26 @@ mount /dev/nvme0n1p1 /mnt/boot
 Refresh mirror list used by `pacstrap`, as well as `pacman` in the new system.
 
 ```
-# reflector --verbose --latest 10 --sort rate --protocol https \
+reflector --verbose --latest 10 --sort rate --protocol https \
 	--save /etc/pacman.d/mirrorlist
 ```
 
 ## Install bootstrap packages
 
 ```
-# pacstrap -K /mnt base linux linux-firmware sudo vim crda iwd
+pacstrap -K /mnt base linux linux-firmware sudo vim
 ```
 
 ## Generate fstab
 
 ```
-# genfstab -U /mnt >> /mnt/etc/fstab
+genfstab -U /mnt >> /mnt/etc/fstab
 ```
 
 ## Enter the new system
 
 ```
-# arch-chroot /mnt
+arch-chroot /mnt
 ```
 
 
@@ -394,13 +394,14 @@ Configure `LANG`.
 ## Set hostname
 
 ```
-# echo "myhost" > /etc/hostname
+echo "myhost" > /etc/hostname
 ```
 
 ## Set regulatory domain
 
 ```
-# iw reg set US
+pacman -S crda
+iw reg set US
 ```
 
 ## Install NetworkManager
@@ -408,13 +409,13 @@ Configure `LANG`.
 Install the package.
 
 ```
-# pacman -S networkmanager
+pacman -S networkmanager
 ```
 
 Enable the service.
 
 ```
-# systemctl enable NetworkManager.service
+systemctl enable NetworkManager.service
 ```
 
 

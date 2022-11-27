@@ -2,13 +2,14 @@
 ## Set hostname
 
 ```
-# echo "myhost" > /etc/hostname
+echo "myhost" > /etc/hostname
 ```
 
 ## Set regulatory domain
 
 ```
-# iw reg set US
+pacman -S crda
+iw reg set US
 ```
 
 ## Install NetworkManager
@@ -16,12 +17,12 @@
 Install the package.
 
 ```
-# pacman -S networkmanager
+pacman -S networkmanager
 ```
 
 Enable the service.
 
 ```
-# systemctl enable NetworkManager.service
+systemctl enable NetworkManager.service
 ```
 {{end}}
