@@ -280,8 +280,7 @@ pacman -S sof-firmware
 First, edit `/etc/mkinitcpio.conf`. Order is important.
 
 
-Add `i915` for Intel graphics for [early KMS]
-(https://wiki.archlinux.org/title/Kernel_mode_setting#Early_KMS_start).
+Add `i915` for Intel graphics for [early KMS](https://wiki.archlinux.org/title/Kernel_mode_setting#Early_KMS_start).
 
 ```diff
 MODULES=(i915)
@@ -304,8 +303,7 @@ options i915 enable_fbc=1
 options i915 fastboot=1
 ```
 
-See [Enable GuC / HuC firmware loading]
-(https://wiki.archlinux.org/title/intel_graphics#Enable_GuC_/_HuC_firmware_loading).
+See [Enable GuC / HuC firmware loading](https://wiki.archlinux.org/title/intel_graphics#Enable_GuC_/_HuC_firmware_loading).
 
 
 Build the image.
