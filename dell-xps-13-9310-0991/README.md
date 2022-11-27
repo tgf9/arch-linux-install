@@ -405,7 +405,7 @@ passwd --lock root
 
 
 
-## Enable Intel graphics features
+## Enable Intel GPU features
 
 Next add this to `/etc/modprobe.d/i915.conf`.
 See [Enable GuC / HuC firmware loading](https://wiki.archlinux.org/title/intel_graphics#Enable_GuC_/_HuC_firmware_loading).
