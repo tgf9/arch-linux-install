@@ -238,7 +238,7 @@ Refresh mirror list used by `pacstrap`, as well as `pacman` in the new system.
 ## Install bootstrap packages
 
 ```
-# pacstrap -K /mnt base linux linux-firmware sudo vim crda iw
+# pacstrap -K /mnt base linux linux-firmware sudo vim crda iwd
 ```
 
 ## Generate fstab
@@ -293,6 +293,19 @@ Add the `encrypt` hook so we can unlock the LUKS partition.
 -HOOKS=(base udev autodetect modconf block filesystems keyboard fsck)
 +HOOKS=(base udev autodetect modconf block encrypt filesystems keyboard fsck)
 ```
+
+
+Next add this to `/etc/modprobe.d/i915.conf`.
+
+```
+options i915 enable_guc=3
+options i915 enable_fbc=1
+options i915 fastboot=1
+```
+
+See [Enable GuC / HuC firmware loading]
+(https://wiki.archlinux.org/title/intel_graphics#Enable_GuC_/_HuC_firmware_loading).
+
 
 Build the image.
 
