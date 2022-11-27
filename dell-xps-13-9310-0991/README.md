@@ -128,7 +128,7 @@ Create a GPT partition table on main drive.
 - `echo w` write changes to disk
 
 ```
-# (echo g; echo w;) | fdisk /dev/nvme0n1
+(echo g; echo w;) | fdisk /dev/nvme0n1
 ```
 
 ## Create EFI partition
@@ -142,7 +142,7 @@ Create a new partition.
 - `echo w` write changes to disk
 
 ```
-# (echo n; echo 1; echo; echo "+512M"; echo w;) | fdisk /dev/nvme0n1
+(echo n; echo 1; echo; echo "+512M"; echo w;) | fdisk /dev/nvme0n1
 ```
 
 Set partition type to EFI.
@@ -151,7 +151,7 @@ Set partition type to EFI.
 - `echo w` write changes to disk
 
 ```
-# (echo t; echo "EFI System"; echo w;) | fdisk /dev/nvme0n1
+(echo t; echo "EFI System"; echo w;) | fdisk /dev/nvme0n1
 ```
 
 ## Create primary partition
@@ -167,7 +167,7 @@ Create a new partition.
 - `echo w` write changes to disk
 
 ```
-# (echo n; echo 2; echo; echo; echo w;) | fdisk /dev/nvme0n1
+(echo n; echo 2; echo; echo; echo w;) | fdisk /dev/nvme0n1
 ```
 
 No need to change partition type, default is "Linux filesystem".
