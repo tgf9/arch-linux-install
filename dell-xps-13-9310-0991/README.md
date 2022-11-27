@@ -461,18 +461,18 @@ passwd --lock root
 ## Install GNOME
 
 ```
+# Fonts
+pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
+
 # Audio management
 pacman -S pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber
 
-# Fonts
-pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
+# Screen sharing
+pacman -S xdg-desktop-portal xdg-desktop-portal-gnome
 
 # GNOME
 pacman -S gdm gnome
 systemctl enable gdm.service
-
-# Screen sharing
-pacman -S xdg-desktop-portal xdg-desktop-portal-gnome
 ```
 
 
