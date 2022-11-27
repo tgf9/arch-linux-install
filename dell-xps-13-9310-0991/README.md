@@ -253,6 +253,19 @@ Refresh mirror list used by `pacstrap`, as well as `pacman` in the new system.
 
 
 
+## Install fwupd
+
+```
+pacman -S fwupd
+```
+
+## Install sof
+
+```
+pacman -S sof-firmware
+```
+
+
 ## Create initial ramdisk
 
 First, edit `/etc/mkinitcpio.conf`. Order is important.
@@ -345,13 +358,6 @@ Enable the service.
 
 ```
 # systemctl enable NetworkManager.service
-```
-
-
-## Install fwupd
-
-```
-pacman -S fwupd
 ```
 
 
