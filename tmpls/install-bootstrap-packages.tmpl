@@ -1,0 +1,17 @@
+{{define "install-bootstrap-packages"}}
+## Install bootstrap packages
+
+Refresh mirror list used by `pacstrap`, as well as `pacman` in the new system.
+
+```
+# reflector --verbose --latest 10 --sort rate --protocol https \
+	--save /etc/pacman.d/mirrorlist
+```
+
+## Install bootstrap packages
+
+```
+# pacstrap -K /mnt base linux linux-firmware sudo vim crda iw
+```
+{{end}}
+

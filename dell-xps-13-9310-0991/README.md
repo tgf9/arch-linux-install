@@ -222,3 +222,67 @@ mkdir /mnt/boot
 mount /dev/nvme0n1p1 /mnt/boot
 ```
 
+
+
+## Install bootstrap packages
+
+Refresh mirror list used by `pacstrap`, as well as `pacman` in the new system.
+
+```
+# reflector --verbose --latest 10 --sort rate --protocol https \
+	--save /etc/pacman.d/mirrorlist
+```
+
+## Install bootstrap packages
+
+```
+# pacstrap -K /mnt base linux linux-firmware sudo vim crda iw
+```
+
+
+
+## Generate fstab
+
+```
+# genfstab -U /mnt >> /mnt/etc/fstab
+```
+
+## Enter the new system
+
+```
+# arch-chroot /mnt
+```
+
+## Configure time
+
+```
+# ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
+# hwclock --systohc
+```
+
+## Configure locale
+
+Uncomment desired locales from `/etc/locale.gen`.
+
+Generate locales.
+
+```
+locale-gen
+```
+
+Configure `LANG`.
+
+```
+echo "LANG=en_US.UTF-8" > /etc/locale.conf
+```
+
+
+
+## Set hostname
+
+```
+echo "myhost" > /etc/hostname
+```
+
+## Install
+
