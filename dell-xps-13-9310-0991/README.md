@@ -280,7 +280,8 @@ pacman -S sof-firmware
 First, edit `/etc/mkinitcpio.conf`. Order is important.
 
 
-Add `i915` for Intel graphics.
+Add `i915` for Intel graphics for [early KMS]
+(https://wiki.archlinux.org/title/Kernel_mode_setting#Early_KMS_start).
 
 ```diff
 MODULES=(i915)
