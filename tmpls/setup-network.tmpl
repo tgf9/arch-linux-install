@@ -5,5 +5,23 @@
 # echo "myhost" > /etc/hostname
 ```
 
-## Install
+## Set regulatory domain
+
+```
+# iw reg set US
+```
+
+## Install NetworkManager
+
+Install the package.
+
+```
+# pacman -S networkmanager
+```
+
+Enable the service.
+
+```
+# systemctl enable NetworkManager.service
+```
 {{end}}

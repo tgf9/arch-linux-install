@@ -258,6 +258,8 @@ Refresh mirror list used by `pacstrap`, as well as `pacman` in the new system.
 ```
 # ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
 # hwclock --systohc
+
+# systemctl enable systemd-timesyncd.service #? Maybe?
 ```
 
 ## Configure locale
@@ -284,5 +286,23 @@ Configure `LANG`.
 # echo "myhost" > /etc/hostname
 ```
 
-## Install
+## Set regulatory domain
+
+```
+# iw reg set US
+```
+
+## Install NetworkManager
+
+Install the package.
+
+```
+# pacman -S networkmanager
+```
+
+Enable the service.
+
+```
+# systemctl enable NetworkManager.service
+```
 
