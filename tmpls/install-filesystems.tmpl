@@ -1,0 +1,39 @@
+{{define "install-filesystems"}}
+## Install FAT32 on EFI partition
+
+```
+# mkfs.fat -F32 /dev/nvme0n1p1
+```
+
+## Encrypt primary partition
+
+Encrypt partition.
+
+```
+cryptsetup --verify-passphrase --verbose luksFormat /dev/nvme0n1p2
+```
+
+Create decrypted device, so we can use it.
+
+```
+cryptsetup open /dev/nvme0n1p2 cryptroot
+```
+
+## Install ext4 on primary partition
+
+Install filesystem on decrypted primary partition.
+
+```
+mkfs.ext4 -F /dev/mapper/cryptroot
+```
+
+## Mount filesystems
+
+```
+mount /dev/mapper/cryptroot /mnt
+mkdir /mnt/boot
+
+mount /dev/nvme0n1p1 /mnt/boot
+```
+{{end}}
+

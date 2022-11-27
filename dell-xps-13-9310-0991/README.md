@@ -148,7 +148,9 @@ Set partition type to EFI.
 # (echo t; echo "EFI System"; echo w;) | fdisk /dev/nvme0n1
 ```
 
-## Create Linux filesystem partition
+## Create primary partition
+
+The primary partition is where all the user data will be stored.
 
 Create a new partition.
 
@@ -179,5 +181,44 @@ Disk identifier: DB00E3FF-2C56-47A8-63D1-DB2191CB608A
 Device           Start       End   Sectors   Size Type
 /dev/nvme0n1p1    2048   1050623   1048576   512M EFI System
 /dev/nvme0n1p2 1050624 937701375 936650752 446.6G Linux filesystem
+```
+
+
+
+## Install FAT32 on EFI partition
+
+```
+# mkfs.fat -F32 /dev/nvme0n1p1
+```
+
+## Encrypt primary partition
+
+Encrypt partition.
+
+```
+cryptsetup --verify-passphrase --verbose luksFormat /dev/nvme0n1p2
+```
+
+Create decrypted device, so we can use it.
+
+```
+cryptsetup open /dev/nvme0n1p2 cryptroot
+```
+
+## Install ext4 on primary partition
+
+Install filesystem on decrypted primary partition.
+
+```
+mkfs.ext4 -F /dev/mapper/cryptroot
+```
+
+## Mount filesystems
+
+```
+mount /dev/mapper/cryptroot /mnt
+mkdir /mnt/boot
+
+mount /dev/nvme0n1p1 /mnt/boot
 ```
 
