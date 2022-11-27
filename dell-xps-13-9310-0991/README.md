@@ -449,3 +449,18 @@ systemctl enable gdm.service
 pacman -S xdg-desktop-portal xdg-desktop-portal-gnome
 ```
 
+
+## Configure GNOME keyboard
+
+Configure the keyboard for Spanish accents and map caps to control.
+
+```
+# Change
+gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us+altgr-intl')]"
+gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']"
+
+# Verify
+gsettings get org.gnome.desktop.input-sources sources
+gsettings get org.gnome.desktop.input-sources xkb-options
+```
+
