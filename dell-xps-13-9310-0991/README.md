@@ -65,6 +65,7 @@ $ sudo eject /dev/sda
 - Disable Secure Boot
 - Storage > NVMe Operation > Select AHCI/NVMe
 
+
 ## Boot installer
 
 - Plug in live USB.
@@ -72,6 +73,7 @@ $ sudo eject /dev/sda
 - Press F12 to access the boot menu when you see the boot logo.
 - Select the installer live USB from boot menu (likely the first entry in the
   menu)
+
 
 
 ## Connect to WiFi
