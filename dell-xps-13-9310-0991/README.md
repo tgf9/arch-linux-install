@@ -198,10 +198,10 @@ Device           Start       End   Sectors   Size Type
 
 ## Encrypt primary partition
 
-Encrypt partition.
+Encrypt partition. See [TRIM support](https://wiki.archlinux.org/title/Dm-crypt/Specialties#Discard/TRIM_support_for_solid_state_drives_(SSD)).
 
 ```
-cryptsetup --verify-passphrase --verbose luksFormat /dev/nvme0n1p2
+cryptsetup --verify-passphrase --verbose --allow-discards luksFormat /dev/nvme0n1p2
 ```
 
 Create decrypted device, so we can use it.
