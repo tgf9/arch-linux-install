@@ -239,8 +239,6 @@ Refresh mirror list used by `pacstrap`, as well as `pacman` in the new system.
 # pacstrap -K /mnt base linux linux-firmware sudo vim crda iw
 ```
 
-
-
 ## Generate fstab
 
 ```
@@ -253,6 +251,8 @@ Refresh mirror list used by `pacstrap`, as well as `pacman` in the new system.
 # arch-chroot /mnt
 ```
 
+
+
 ## Configure time
 
 ```
@@ -261,6 +261,7 @@ Refresh mirror list used by `pacstrap`, as well as `pacman` in the new system.
 
 # systemctl enable systemd-timesyncd.service #? Maybe?
 ```
+
 
 ## Configure locale
 
@@ -277,7 +278,6 @@ Configure `LANG`.
 ```
 # echo "LANG=en_US.UTF-8" > /etc/locale.conf
 ```
-
 
 
 ## Set hostname

@@ -1,0 +1,17 @@
+{{define "setup-locale"}}
+## Configure locale
+
+Uncomment desired locales from `/etc/locale.gen`.
+
+Generate locales.
+
+```
+# locale-gen
+```
+
+Configure `LANG`.
+
+```
+# echo "LANG=en_US.UTF-8" > /etc/locale.conf
+```
+{{end}}

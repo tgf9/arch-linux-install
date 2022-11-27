@@ -1,4 +1,4 @@
-{{define "install-bootstrap-packages"}}
+{{define "bootstrap-system"}}
 ## Install bootstrap packages
 
 Refresh mirror list used by `pacstrap`, as well as `pacman` in the new system.
@@ -13,5 +13,16 @@ Refresh mirror list used by `pacstrap`, as well as `pacman` in the new system.
 ```
 # pacstrap -K /mnt base linux linux-firmware sudo vim crda iw
 ```
-{{end}}
 
+## Generate fstab
+
+```
+# genfstab -U /mnt >> /mnt/etc/fstab
+```
+
+## Enter the new system
+
+```
+# arch-chroot /mnt
+```
+{{end}}
