@@ -302,7 +302,7 @@ options i915 fastboot=1
 
 See [Hardware video acceleration](https://wiki.archlinux.org/title/Hardware_video_acceleration#Intel).
 ```
-pacman -S intel-media-driver libva-utils
+pacman -S intel-media-driver intel-gpu-tools libva-utils
 ```
 
 Verify there are no errors.
@@ -530,4 +530,31 @@ gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']"
 gsettings get org.gnome.desktop.input-sources sources
 gsettings get org.gnome.desktop.input-sources xkb-options
 ```
+
+
+## Install Firefox
+
+```
+pacman -S firefox
+```
+
+
+## Configure Firefox
+Enable Wayland. Add this to `~/.bash_profile`.
+
+```
+if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+    export MOZ_ENABLE_WAYLAND=1
+fi
+```
+
+Enable hardware acceleration.
+
+Open Firefox and navigate to `about:config`.
+
+```
+gfx.webrender.all true
+media.ffmpeg.vaapi.enabled true
+```
+
 

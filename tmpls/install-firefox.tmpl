@@ -1,0 +1,27 @@
+{{define "install-firefox"}}
+## Install Firefox
+
+```
+pacman -S firefox
+```
+
+{{if eq . "vaapi"}}
+## Configure Firefox
+Enable Wayland. Add this to `~/.bash_profile`.
+
+```
+if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+    export MOZ_ENABLE_WAYLAND=1
+fi
+```
+
+Enable hardware acceleration.
+
+Open Firefox and navigate to `about:config`.
+
+```
+gfx.webrender.all true
+media.ffmpeg.vaapi.enabled true
+```
+{{end}}
+{{end}}
