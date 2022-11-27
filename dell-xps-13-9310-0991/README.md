@@ -297,10 +297,10 @@ efibootmgr --create --disk /dev/nvme0n1 --part 1 --label 'Arch Linux' \
 ## Configure time
 
 ```
-# ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
+# ln -sf /usr/share/zoneinfo/America/Los_Angeles /etc/localtime
 # hwclock --systohc
 
-# systemctl enable systemd-timesyncd.service #? Maybe?
+# systemctl enable systemd-timesyncd.service
 ```
 
 
