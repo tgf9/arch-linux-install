@@ -1,0 +1,16 @@
+{{define "setup-bash"}}
+## Install bash completions
+
+```
+sudo pacman -S bash-completion
+```
+
+## Configure bash history
+
+- `ignoreboth` ignore consecutive commands and commands that start with space.
+
+```
+export HISTCONTROL="ignoreboth"
+```
+{{end}}
+

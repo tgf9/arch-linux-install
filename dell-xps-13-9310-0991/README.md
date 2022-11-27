@@ -532,6 +532,29 @@ gsettings get org.gnome.desktop.input-sources xkb-options
 ```
 
 
+
+## Install manpages
+
+```
+sudo pacman -S man-db man-pages-es
+```
+
+
+## Install bash completions
+
+```
+sudo pacman -S bash-completion
+```
+
+## Configure bash history
+
+- `ignoreboth` ignore consecutive commands and commands that start with space.
+
+```
+export HISTCONTROL="ignoreboth"
+```
+
+
 ## Install Firefox
 
 ```
