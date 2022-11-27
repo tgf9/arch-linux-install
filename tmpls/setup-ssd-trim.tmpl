@@ -1,0 +1,11 @@
+{{define "setup-ssd-trim"}}
+## Enable TRIM
+
+See [SSD NVMe](https://wiki.archlinux.org/title/Solid_state_drive/NVMe).
+
+Enable periodic trim.
+
+```
+systemctl enable fstrim.timer
+```
+{{end}}

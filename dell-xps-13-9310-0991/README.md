@@ -314,6 +314,17 @@ vainfo: Driver version: Intel iHD driver for Intel(R) Gen Graphics - 22.4.4
 
 
 
+## Enable TRIM
+
+See [SSD NVMe](https://wiki.archlinux.org/title/Solid_state_drive/NVMe).
+
+Enable periodic trim.
+
+```
+systemctl enable fstrim.timer
+```
+
+
 
 ## Create initial ramdisk
 
