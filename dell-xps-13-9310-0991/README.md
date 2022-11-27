@@ -267,13 +267,13 @@ Uncomment desired locales from `/etc/locale.gen`.
 Generate locales.
 
 ```
-locale-gen
+# locale-gen
 ```
 
 Configure `LANG`.
 
 ```
-echo "LANG=en_US.UTF-8" > /etc/locale.conf
+# echo "LANG=en_US.UTF-8" > /etc/locale.conf
 ```
 
 
@@ -281,7 +281,7 @@ echo "LANG=en_US.UTF-8" > /etc/locale.conf
 ## Set hostname
 
 ```
-echo "myhost" > /etc/hostname
+# echo "myhost" > /etc/hostname
 ```
 
 ## Install
