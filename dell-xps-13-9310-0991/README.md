@@ -487,21 +487,6 @@ systemctl enable gdm.service
 ```
 
 
-## Configure GNOME keyboard
-
-Configure the keyboard for Spanish accents and map caps to control.
-
-```
-# Change
-gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us+altgr-intl')]"
-gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']"
-
-# Verify
-gsettings get org.gnome.desktop.input-sources sources
-gsettings get org.gnome.desktop.input-sources xkb-options
-```
-
-
 
 ## Reboot
 
@@ -524,4 +509,20 @@ Restart computer.
 reboot
 ```
 
+
+
+
+## Configure GNOME keyboard
+
+Configure the keyboard for Spanish accents and map caps to control.
+
+```
+# Change
+gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us+altgr-intl')]"
+gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']"
+
+# Verify
+gsettings get org.gnome.desktop.input-sources sources
+gsettings get org.gnome.desktop.input-sources xkb-options
+```
 
