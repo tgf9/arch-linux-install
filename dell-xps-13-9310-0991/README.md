@@ -132,7 +132,7 @@ Create a new partition.
 - `echo n` add new partition
 - `echo 1` set parition number
 - `echo` accept default first sector
-- `echo "+513M"` set the last sector
+- `echo "+512M"` set the last sector
 - `echo w` write changes to disk
 
 ```
@@ -168,5 +168,16 @@ No need to change partition type, default is "Linux filesystem".
 
 ```
 # fdisk -l /dev/nvme0n1
+Disk /dev/nvme0n1: 447.13 GiB, 480103981056 bytes, 937703088 sectors
+Disk model: PC SN530 NVMe WDC
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: DB00E3FF-2C56-47A8-63D1-DB2191CB608A
+
+Device           Start       End   Sectors   Size Type
+/dev/nvme0n1p1    2048   1050623   1048576   512M EFI System
+/dev/nvme0n1p2 1050624 937701375 936650752 446.6G Linux filesystem
 ```
 
