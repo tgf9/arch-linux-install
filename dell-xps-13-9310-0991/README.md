@@ -275,6 +275,34 @@ pacman -S sof-firmware
 
 
 
+## Enable Intel GPU features
+
+Next add this to `/etc/modprobe.d/i915.conf`.
+See [Enable GuC / HuC firmware loading](https://wiki.archlinux.org/title/intel_graphics#Enable_GuC_/_HuC_firmware_loading).
+
+```
+options i915 enable_guc=3
+options i915 enable_fbc=1
+options i915 fastboot=1
+```
+
+## Configure hardware acceleration
+
+See [Hardware video acceleration](https://wiki.archlinux.org/title/Hardware_video_acceleration#Intel).
+```
+pacman -S intel-media-driver intel-gpu-tools libva-utils
+```
+
+Verify there are no errors.
+
+```
+$ vainfo | grep "Driver"
+vainfo: Driver version: Intel iHD driver for Intel(R) Gen Graphics - 22.4.4
+```
+
+
+
+
 ## Create initial ramdisk
 
 First, edit `/etc/mkinitcpio.conf`. Order is important.
@@ -291,7 +319,7 @@ Add the `encrypt` hook so we can unlock the LUKS partition.
 
 ```diff
 -HOOKS=(base udev autodetect modconf block filesystems keyboard fsck)
-+HOOKS=(base udev autodetect modconf block encrypt filesystems keyboard fsck)
++HOOKS=(base udev autodetect modconf block {+encrypt+} filesystems keyboard fsck)
 ```
 Build the image.
 
@@ -400,34 +428,6 @@ usermod --append --groups wheel tgf9
 
 ```
 passwd --lock root
-```
-
-
-
-
-## Enable Intel GPU features
-
-Next add this to `/etc/modprobe.d/i915.conf`.
-See [Enable GuC / HuC firmware loading](https://wiki.archlinux.org/title/intel_graphics#Enable_GuC_/_HuC_firmware_loading).
-
-```
-options i915 enable_guc=3
-options i915 enable_fbc=1
-options i915 fastboot=1
-```
-
-## Configure hardware acceleration
-
-See [Hardware video acceleration](https://wiki.archlinux.org/title/Hardware_video_acceleration#Intel).
-```
-pacman -S intel-media-driver intel-gpu-tools libva-utils
-```
-
-Verify there are no errors.
-
-```
-$ vainfo | grep "Driver"
-vainfo: Driver version: Intel iHD driver for Intel(R) Gen Graphics - 22.4.4
 ```
 
 

@@ -15,7 +15,7 @@ Add the `encrypt` hook so we can unlock the LUKS partition.
 
 ```diff
 -HOOKS=(base udev autodetect modconf block filesystems keyboard fsck)
-+HOOKS=(base udev autodetect modconf block encrypt filesystems keyboard fsck)
++HOOKS=(base udev autodetect modconf block {+encrypt+} filesystems keyboard fsck)
 ```
 Build the image.
 
