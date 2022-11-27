@@ -462,7 +462,7 @@ passwd --lock root
 
 ```
 # Audio management
-pacman -S pacman -S pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber
+pacman -S pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber
 
 # Fonts
 pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
