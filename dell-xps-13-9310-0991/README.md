@@ -306,3 +306,32 @@ Enable the service.
 # systemctl enable NetworkManager.service
 ```
 
+
+## Enable sudo privileges for wheel group
+
+```
+visudo
+```
+
+Scroll down and then uncomment this line.
+
+```
+# %wheel ALL=(ALL) ALL
+```
+
+## Add a new user
+
+```
+useradd --create-home tgf9
+passwd tgf9
+
+# Append to wheel group.
+usermod --append --groups wheel tgf9
+```
+
+## Disable root login
+
+```
+passwd --lock root
+```
+
