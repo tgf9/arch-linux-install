@@ -371,9 +371,13 @@ Create new boot entry.
 
 Kernel parameters.
 - `cryptdevice` the location of an encrypted partition, plus the decrypted name
+- `initrd` the location of the initial ramdisk
 - `root` the root filesystem
 - `rw` mount the root device as read-write
-- `initrd` the location of the initial ramdisk
+
+Helpful for initial setup only.
+- `debug` enable kernel debugging
+- `ignore_loglevel` print all kernel messages
 
 ```
 efibootmgr --create --disk /dev/nvme0n1 --part 1 --label 'Arch Linux' \
