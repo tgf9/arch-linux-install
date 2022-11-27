@@ -509,6 +509,7 @@ Restart computer.
 reboot
 ```
 
+Unplug live USB.
 
 
 
