@@ -3,6 +3,8 @@
 This guide is for installing Linux on a Dell XPS 13 9310. See
 [lshw.txt](lshw.txt) for more detailed hardware info.
 
+See also [Dell XPS 13 (9310)](https://wiki.archlinux.org/title/Dell_XPS_13_(9310)).
+
 
 ## Get installer ISO
 
