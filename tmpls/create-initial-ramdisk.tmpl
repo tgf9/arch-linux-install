@@ -17,18 +17,6 @@ Add the `encrypt` hook so we can unlock the LUKS partition.
 -HOOKS=(base udev autodetect modconf block filesystems keyboard fsck)
 +HOOKS=(base udev autodetect modconf block encrypt filesystems keyboard fsck)
 ```
-
-{{if eq . "TigerLake"}}
-Next add this to `/etc/modprobe.d/i915.conf`.
-See [Enable GuC / HuC firmware loading](https://wiki.archlinux.org/title/intel_graphics#Enable_GuC_/_HuC_firmware_loading).
-
-```
-options i915 enable_guc=3
-options i915 enable_fbc=1
-options i915 fastboot=1
-```
-{{end}}
-
 Build the image.
 
 ```

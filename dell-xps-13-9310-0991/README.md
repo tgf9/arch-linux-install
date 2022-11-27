@@ -293,18 +293,6 @@ Add the `encrypt` hook so we can unlock the LUKS partition.
 -HOOKS=(base udev autodetect modconf block filesystems keyboard fsck)
 +HOOKS=(base udev autodetect modconf block encrypt filesystems keyboard fsck)
 ```
-
-
-Next add this to `/etc/modprobe.d/i915.conf`.
-See [Enable GuC / HuC firmware loading](https://wiki.archlinux.org/title/intel_graphics#Enable_GuC_/_HuC_firmware_loading).
-
-```
-options i915 enable_guc=3
-options i915 enable_fbc=1
-options i915 fastboot=1
-```
-
-
 Build the image.
 
 ```
@@ -412,5 +400,44 @@ usermod --append --groups wheel tgf9
 
 ```
 passwd --lock root
+```
+
+
+
+## Configure Intel graphics
+
+
+Next add this to `/etc/modprobe.d/i915.conf`.
+See [Enable GuC / HuC firmware loading](https://wiki.archlinux.org/title/intel_graphics#Enable_GuC_/_HuC_firmware_loading).
+
+```
+options i915 enable_guc=3
+options i915 enable_fbc=1
+options i915 fastboot=1
+```
+
+See [Hardware video acceleration](https://wiki.archlinux.org/title/Hardware_video_acceleration#Intel).
+```
+pacman -S intel-media-driver intel-gpu-tools libva-utils vdpauinfo
+```
+
+
+
+
+## Install GNOME
+
+```
+# Audio management
+pacman -S pacman -S pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber
+
+# Fonts
+pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
+
+# GNOME
+pacman -S gdm gnome
+systemctl enable gdm.service
+
+# Screen sharing
+pacman -S xdg-desktop-portal xdg-desktop-portal-gnome
 ```
 

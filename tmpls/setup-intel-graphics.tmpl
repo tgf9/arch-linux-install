@@ -1,0 +1,20 @@
+{{define "setup-intel-graphics"}}
+## Configure Intel graphics
+
+{{if eq . "TigerLake"}}
+Next add this to `/etc/modprobe.d/i915.conf`.
+See [Enable GuC / HuC firmware loading](https://wiki.archlinux.org/title/intel_graphics#Enable_GuC_/_HuC_firmware_loading).
+
+```
+options i915 enable_guc=3
+options i915 enable_fbc=1
+options i915 fastboot=1
+```
+
+See [Hardware video acceleration](https://wiki.archlinux.org/title/Hardware_video_acceleration#Intel).
+```
+pacman -S intel-media-driver intel-gpu-tools libva-utils vdpauinfo
+```
+{{end}}
+
+{{end}}
