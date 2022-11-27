@@ -186,7 +186,6 @@ Device           Start       End   Sectors   Size Type
 ```
 
 
-
 ## Install FAT32 on EFI partition
 
 ```
