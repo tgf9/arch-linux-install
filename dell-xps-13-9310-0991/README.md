@@ -76,8 +76,7 @@ $ sudo eject /dev/sda
 - Plug in live USB.
 - Power on the laptop.
 - Press F12 to access the boot menu when you see the boot logo.
-- Select the installer live USB from boot menu (likely the first entry in the
-  menu)
+- Select "Arch Linux install medium" from GRUB menu
 
 
 
