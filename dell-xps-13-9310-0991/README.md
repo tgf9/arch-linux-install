@@ -348,6 +348,13 @@ Enable the service.
 ```
 
 
+## Install fwupd
+
+```
+pacman -S fwupd
+```
+
+
 ## Enable sudo privileges for wheel group
 
 ```
