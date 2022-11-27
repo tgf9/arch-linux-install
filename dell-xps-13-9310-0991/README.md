@@ -346,6 +346,12 @@ pacman -S efibootmgr
 
 The firmware will be in charge of booting Linux.
 
+Kernel parameters.
+- `cryptdevice` the location of an encrypted partition, plus the decrypted name
+- `root` the root filesystem
+- `rw` mount the root device as read-write
+- `initrd` the location of the initial ramdisk
+
 ```
 efibootmgr --create --disk /dev/nvme0n1 --part 1 --label 'Arch Linux' \
 	--loader /vmlinuz-linux \
