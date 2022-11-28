@@ -1,0 +1,19 @@
+{{define "setup-bluetooth"}}
+## Setup bluetooth
+
+See [Bluetooth](https://wiki.archlinux.org/title/bluetooth) and
+[PipeWire Bluetooth](https://wiki.archlinux.org/title/PipeWire#Bluetooth_devices).
+
+```
+sudo pacman -S bluez bluez-utils
+
+# This should already be installed by gnome meta package.
+# sudo pacman -S gnome-bluetooth-3.0 
+```
+
+Enable service.
+
+```
+sudo systemctl enable --now bluetooth.service
+```
+{{end}}

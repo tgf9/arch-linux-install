@@ -481,6 +481,7 @@ pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 
 # Audio management
 pacman -S pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber
+pacman -S pipewire-v4l2 gst-plugin-pipewire
 
 # Screen sharing
 pacman -S xdg-desktop-portal xdg-desktop-portal-gnome
@@ -555,59 +556,30 @@ export HISTCONTROL="ignoreboth"
 ```
 
 
-## Install Firefox
+## Setup bluetooth
+
+See [Bluetooth](https://wiki.archlinux.org/title/bluetooth) and
+[PipeWire Bluetooth](https://wiki.archlinux.org/title/PipeWire#Bluetooth_devices).
 
 ```
-pacman -S firefox
+sudo pacman -S bluez bluez-utils
+
+# This should already be installed by gnome meta package.
+# sudo pacman -S gnome-bluetooth-3.0 
 ```
 
-
-## Configure Firefox
-Enable Wayland. Add this to `~/.bash_profile`.
+Enable service.
 
 ```
-if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
-    export MOZ_ENABLE_WAYLAND=1
-fi
-```
-
-Enable hardware acceleration.
-
-Open Firefox and navigate to `about:config`.
-
-```
-gfx.webrender.all true
-media.ffmpeg.vaapi.enabled true
+sudo systemctl enable --now bluetooth.service
 ```
 
 
-
-## Install Firefox
-
-```
-pacman -S firefox
-```
-
-
-## Configure Firefox
-Enable Wayland. Add this to `~/.bash_profile`.
+## Install gstreamer
 
 ```
-if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
-    export MOZ_ENABLE_WAYLAND=1
-fi
+sudo pacman -S gstreamer gst-libav gst-plugins-good gst-plugins-ugly gstreamer-vaapi
 ```
-
-Enable hardware acceleration.
-
-Open Firefox and navigate to `about:config`.
-
-```
-gfx.webrender.all true
-media.ffmpeg.vaapi.enabled true
-```
-
-
 
 
 ## Install CUPS
@@ -629,4 +601,32 @@ Enable service
 ```
 sudo systemctl enable --now cups.service
 ```
+
+
+
+## Install Firefox
+
+```
+pacman -S firefox
+```
+
+
+## Configure Firefox
+Enable Wayland. Add this to `~/.bash_profile`.
+
+```
+if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+    export MOZ_ENABLE_WAYLAND=1
+fi
+```
+
+Enable hardware acceleration.
+
+Open Firefox and navigate to `about:config`.
+
+```
+gfx.webrender.all true
+media.ffmpeg.vaapi.enabled true
+```
+
 
