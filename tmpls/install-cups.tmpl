@@ -6,16 +6,16 @@ See [CUPS](https://wiki.archlinux.org/title/CUPS).
 Install packages.
 
 ```
-pacman -S cups cups-pdf cups-filters
+sudo pacman -S cups cups-pdf cups-filters
 
 # Drivers
-pacman -S foomatic-db-engine foomatic-db-ppds foomatic-db-nonfree-ppds gutenprint foomatic-db-gutenprint-ppds
-pacman -S hplip
+sudo pacman -S foomatic-db-engine foomatic-db-ppds foomatic-db-nonfree-ppds gutenprint foomatic-db-gutenprint-ppds
+sudo pacman -S hplip
 ```
 
 Enable service
 
 ```
-systemctl enable --now cups.service
+sudo systemctl enable --now cups.service
 ```
 {{end}}
