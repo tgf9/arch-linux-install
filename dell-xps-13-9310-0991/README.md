@@ -486,7 +486,7 @@ pacman -S pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber
 pacman -S xdg-desktop-portal xdg-desktop-portal-gnome
 
 # GNOME
-pacman -S gdm gnome
+pacman -S gdm gnome xdg-utils wl-clipboard
 systemctl enable gdm.service
 ```
 

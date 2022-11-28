@@ -12,7 +12,7 @@ pacman -S pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber
 pacman -S xdg-desktop-portal xdg-desktop-portal-gnome
 
 # GNOME
-pacman -S gdm gnome
+pacman -S gdm gnome xdg-utils {{if eq . "wayland"}}wl-clipboard{{else}}xclip{{end}}
 systemctl enable gdm.service
 ```
 {{end}}
