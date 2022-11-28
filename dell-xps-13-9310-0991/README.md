@@ -581,3 +581,52 @@ media.ffmpeg.vaapi.enabled true
 ```
 
 
+
+## Install Firefox
+
+```
+pacman -S firefox
+```
+
+
+## Configure Firefox
+Enable Wayland. Add this to `~/.bash_profile`.
+
+```
+if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+    export MOZ_ENABLE_WAYLAND=1
+fi
+```
+
+Enable hardware acceleration.
+
+Open Firefox and navigate to `about:config`.
+
+```
+gfx.webrender.all true
+media.ffmpeg.vaapi.enabled true
+```
+
+
+
+
+## Install CUPS
+
+See [CUPS](https://wiki.archlinux.org/title/CUPS).
+
+Install packages.
+
+```
+pacman -S cups cups-pdf cups-filters
+
+# Drivers
+pacman -S foomatic-db-engine foomatic-db-ppds foomatic-db-nonfree-ppds gutenprint foomatic-db-gutenprint-ppds
+pacman -S hplip
+```
+
+Enable service
+
+```
+systemctl enable --now cups.service
+```
+
