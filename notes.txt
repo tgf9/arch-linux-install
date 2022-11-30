@@ -1,0 +1,5 @@
+HOOKS=(base systemd autodetect modconf kms keyboard sd-vconsole block sd-encrypt filesystems fsck)
+missing /etc/vconsole.conf
+
+
+initrd=/intel-ucode.img initrd=/initramfs-linux.img rd.luks.name=$(blkid -s UUID -o value /dev/nvme0n1p2)=cryptroot root=/dev/mapper/cryptroot rw quiet loglevel=3 systemd.show_status=auto rd.udev.log_level=3
