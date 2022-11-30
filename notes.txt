@@ -3,3 +3,8 @@ missing /etc/vconsole.conf
 
 
 initrd=/intel-ucode.img initrd=/initramfs-linux.img rd.luks.name=$(blkid -s UUID -o value /dev/nvme0n1p2)=cryptroot root=/dev/mapper/cryptroot rw quiet loglevel=3 systemd.show_status=auto rd.udev.log_level=3
+
+
+--- 
+
+https://wiki.archlinux.org/title/GNOME/Keyring#PAM_step
