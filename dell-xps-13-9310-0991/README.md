@@ -489,6 +489,9 @@ pacman -S xdg-desktop-portal xdg-desktop-portal-gnome
 # GNOME
 pacman -S gdm gnome xdg-utils wl-clipboard
 systemctl enable gdm.service
+
+# Power management
+pacman -S power-profiles-daemon
 ```
 
 
