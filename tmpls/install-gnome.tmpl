@@ -15,5 +15,8 @@ pacman -S xdg-desktop-portal xdg-desktop-portal-gnome
 # GNOME
 pacman -S gdm gnome xdg-utils {{if eq . "wayland"}}wl-clipboard{{else}}xclip{{end}}
 systemctl enable gdm.service
+
+# Power management
+pacman -S power-profiles-daemon
 ```
 {{end}}
