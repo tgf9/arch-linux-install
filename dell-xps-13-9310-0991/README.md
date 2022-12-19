@@ -596,6 +596,7 @@ sudo pacman -S cups cups-pdf cups-filters
 
 # Drivers
 sudo pacman -S foomatic-db-engine foomatic-db-ppds foomatic-db-nonfree-ppds gutenprint foomatic-db-gutenprint-ppds
+sudo pacman -S system-config-printer
 sudo pacman -S hplip
 ```
 
